@@ -5,13 +5,22 @@
 *.obj
 *.class
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.env
+
 # Editor / OS
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Scratch
+# Scratch — local playground, never committed
 input.txt
 output.txt
 scratch/

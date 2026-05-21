@@ -1,42 +1,60 @@
 # Competitive Programming
 
-My solutions to algorithm and data-structure problems, grouped by topic. Each problem has its own folder with the code and a short write-up of how I approached it.
+My solutions to algorithm and data-structure problems, grouped by topic. Each category folder has a curated list of practice problems and language-specific solution folders.
 
 ## Structure
 
 ```
-<category>/<problem-name>/
-    ├── solution.<ext>
-    └── explanation.md
+<category>/
+    ├── exercises.md          # curated problems (Easy / Medium / Hard)
+    ├── python/               # solutions in Python
+    │     └── <problem>.py
+    └── cpp/                  # solutions in C++
+          └── <problem>.cpp
 ```
 
 Example:
 
 ```
-arrays/two-sum/
-    ├── solution.py
-    └── explanation.md
+arrays/
+    ├── exercises.md
+    ├── python/
+    │     └── two-sum.py
+    └── cpp/
+          └── two-sum.cpp
 ```
 
-If I solve the same problem in more than one language, both files live side-by-side: `solution.cpp`, `solution.py`.
+For SQL there is no language split — solutions live directly inside `sql/` as `.sql` files.
 
 ## Categories
 
 `arrays` · `strings` · `hashmaps` · `linked-lists` · `stacks-and-queues` · `trees` · `graphs` · `heaps` · `dynamic-programming` · `greedy` · `backtracking` · `binary-search` · `two-pointers` · `sliding-window` · `bit-manipulation` · `math` · `sorting` · `recursion` · `sql`
 
-When a problem fits more than one, I pick the category that matches the **core technique** I used to solve it.
+When a problem fits more than one, pick the category that matches the **core technique** used to solve it.
+
+## Templates
+
+- [`templates/template.py`](templates/template.py) — Python solution skeleton with a header docstring (source, difficulty, complexity).
+- [`templates/template.cpp`](templates/template.cpp) — C++ competitive-programming skeleton with common macros and fast I/O.
+- [`templates/explanation.md`](templates/explanation.md) — long-form write-up template, if a problem deserves more than a header comment.
 
 ## Adding a problem
 
-1. Find the right category.
-2. Create a folder in kebab-case: `arrays/maximum-subarray/`.
-3. Add `solution.<ext>` and `explanation.md` (template lives in [`templates/`](templates/explanation.md)).
-4. Fill in the write-up before committing.
+1. Pick the right category.
+2. Find the problem in that category's `exercises.md` (or add it to the list).
+3. Create the solution file using the language template:
+   - Python: `<category>/python/<problem-name>.py`
+   - C++:    `<category>/cpp/<problem-name>.cpp`
+4. Fill the header (source, difficulty, approach, complexity) before committing.
 
 ## Conventions
 
-- Folders and files: lowercase, kebab-case.
-- Problem folders use the canonical name only — no problem numbers, no platform prefixes.
-- Solution file is always `solution.<ext>`; write-up is always `explanation.md`.
-- Commit messages look like `arrays: add two-sum` or `dp: refactor lis to O(n log n)`.
-- One problem per folder. One explanation per solution. No loose files at the root.
+- Folder and file names: lowercase, **kebab-case** (`two-sum.py`, not `TwoSum.py`).
+- One file per problem — the header docstring/comment **is** the write-up. Use [`templates/explanation.md`](templates/explanation.md) as a separate file only when the explanation is too long to fit in a header.
+- Problem names use the canonical name only — no problem numbers, no platform prefixes.
+- Commit messages: `<category>: <verb> <problem-name>`, e.g. `arrays: add two-sum`, `dp: refactor lis to O(n log n)`.
+- Local scratch and binaries (`*.exe`, `input.txt`, `output.txt`, `scratch/`) are gitignored — never commit them.
+
+## License
+
+[MIT](LICENSE).
