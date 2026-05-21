@@ -1,0 +1,18 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+*.class
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Scratch
+input.txt
+output.txt
+scratch/
+tmp/
