@@ -1,60 +1,79 @@
-# Competitive Programming
+# Programação Competitiva
 
-My solutions to algorithm and data-structure problems, grouped by topic. Each category folder has a curated list of practice problems and language-specific solution folders.
+Repositório de estudo contínuo — soluções organizadas por técnica, com foco em entender o problema antes de resolver.
 
-## Structure
+Cada solução tem cabeçalho com abordagem, complexidade e raciocínio. Não é só código — é o processo de pensar.
+
+---
+
+## Por que esse repositório existe
+
+Estudo algoritmos com consistência porque acredito que pensar bem sobre complexidade muda a qualidade de qualquer código que você escreve — seja numa competição ou num pipeline em produção.
+
+O objetivo não é volume. É entender de verdade cada técnica antes de passar pra próxima.
+
+---
+
+## Estrutura
 
 ```
-<category>/
-    ├── exercises.md          # curated problems (Easy / Medium / Hard)
-    ├── python/               # solutions in Python
-    │     └── <problem>.py
-    └── cpp/                  # solutions in C++
-          └── <problem>.cpp
+<categoria>/
+    ├── exercises.md     # lista de problemas (Fácil / Médio / Difícil)
+    ├── python/          # soluções em Python
+    │     └── <problema>.py
+    └── cpp/             # soluções em C++
+          └── <problema>.cpp
 ```
 
-Example:
+Para SQL, as soluções ficam direto dentro da pasta `sql/` como arquivos `.sql`.
 
-```
-arrays/
-    ├── exercises.md
-    ├── python/
-    │     └── two-sum.py
-    └── cpp/
-          └── two-sum.cpp
-```
+---
 
-For SQL there is no language split — solutions live directly inside `sql/` as `.sql` files.
-
-## Categories
+## Categorias
 
 `arrays` · `strings` · `hashmaps` · `linked-lists` · `stacks-and-queues` · `trees` · `graphs` · `heaps` · `dynamic-programming` · `greedy` · `backtracking` · `binary-search` · `two-pointers` · `sliding-window` · `bit-manipulation` · `math` · `sorting` · `recursion` · `sql`
 
-When a problem fits more than one, pick the category that matches the **core technique** used to solve it.
+Quando um problema se encaixa em mais de uma categoria, o critério é a **técnica principal** usada pra resolver.
+
+---
+
+## Foco atual
+
+Estudando com prioridade:
+
+- Two Pointers e Sliding Window
+- Binary Search (variações e aplicações)
+- Dynamic Programming (bottom-up)
+- Grafos (BFS, DFS, caminhos mínimos)
+
+---
+
+## Como adicionar uma solução
+
+1. Escolha a categoria certa
+2. Abra o `exercises.md` da categoria e localize o problema (ou adicione)
+3. Crie o arquivo usando o template da linguagem:
+   - Python: `<categoria>/python/<nome-do-problema>.py`
+   - C++: `<categoria>/cpp/<nome-do-problema>.cpp`
+4. Preencha o cabeçalho antes de commitar — fonte, dificuldade, abordagem, complexidade
+
+---
+
+## Convenções
+
+- Nomes de arquivos e pastas em **kebab-case** minúsculo (`two-sum.py`, não `TwoSum.py`)
+- Um arquivo por problema — o cabeçalho é a explicação
+- Nome canônico do problema, sem número ou prefixo de plataforma
+- Commit: `<categoria>: <verbo> <nome-do-problema>` — ex: `arrays: add two-sum`, `dp: refactor lis to O(n log n)`
+
+---
 
 ## Templates
 
-- [`templates/template.py`](templates/template.py) — Python solution skeleton with a header docstring (source, difficulty, complexity).
-- [`templates/template.cpp`](templates/template.cpp) — C++ competitive-programming skeleton with common macros and fast I/O.
-- [`templates/explanation.md`](templates/explanation.md) — long-form write-up template, if a problem deserves more than a header comment.
+- [`templates/template.py`](templates/template.py) — esqueleto Python com cabeçalho de docstring
+- [`templates/template.cpp`](templates/template.cpp) — esqueleto C++ com macros e fast I/O
+- [`templates/explanation.md`](templates/explanation.md) — template de write-up longo, quando o cabeçalho não é suficiente
 
-## Adding a problem
+---
 
-1. Pick the right category.
-2. Find the problem in that category's `exercises.md` (or add it to the list).
-3. Create the solution file using the language template:
-   - Python: `<category>/python/<problem-name>.py`
-   - C++:    `<category>/cpp/<problem-name>.cpp`
-4. Fill the header (source, difficulty, approach, complexity) before committing.
-
-## Conventions
-
-- Folder and file names: lowercase, **kebab-case** (`two-sum.py`, not `TwoSum.py`).
-- One file per problem — the header docstring/comment **is** the write-up. Use [`templates/explanation.md`](templates/explanation.md) as a separate file only when the explanation is too long to fit in a header.
-- Problem names use the canonical name only — no problem numbers, no platform prefixes.
-- Commit messages: `<category>: <verb> <problem-name>`, e.g. `arrays: add two-sum`, `dp: refactor lis to O(n log n)`.
-- Local scratch and binaries (`*.exe`, `input.txt`, `output.txt`, `scratch/`) are gitignored — never commit them.
-
-## License
-
-[MIT](LICENSE).
+Licença [MIT](LICENSE).
