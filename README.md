@@ -35,7 +35,7 @@ python arrays/two-sum.py
 # se travar, o gabarito está em arrays/solutions/two-sum.py
 ```
 
-Os testes usam `assert` — se um falhar, o Python aponta qual caso quebrou.
+Os testes usam `assert`. Se um falhar, o Python aponta qual caso quebrou.
 
 ## Categorias
 
@@ -47,10 +47,10 @@ A lista completa dos problemas está em [`PROBLEMS.md`](PROBLEMS.md).
 
 ## Templates
 
-- [`templates/template.py`](templates/template.py) — esqueleto Python
-- [`templates/template.cpp`](templates/template.cpp) — esqueleto C++ com fast I/O
-- [`templates/explanation.md`](templates/explanation.md) — pra explicar um problema mais a fundo
+- [`templates/template.py`](templates/template.py): esqueleto Python
+- [`templates/template.cpp`](templates/template.cpp): esqueleto C++ com fast I/O
+- [`templates/explanation.md`](templates/explanation.md): pra explicar um problema mais a fundo
 
 ## Licença
 
-[MIT](LICENSE) — use à vontade.
+[MIT](LICENSE). Use à vontade.
